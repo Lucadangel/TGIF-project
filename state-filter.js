@@ -13,12 +13,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
   function fetchAndPopulateTable(selectedState) {
     fetch(url, {
-      method: 'GET',
-      headers: {
-        'X-API-KEY': '7K7BwVV5SlAlh13rWDa4licj8lcPKgB1WNroXVX9',
-        Accept: 'application/json',
-        'Content-Type': 'application/json',
-      },
     })
       .then(handleErrors)
       .then((response) => response.json())

@@ -8,8 +8,8 @@
     </head>
     
     <body>
-      <a class="navbar-brand" scr="/pages/home.html">
-        <img src="/assets/img/logo.jpg " alt="logo" height="200">
+      <a class="navbar-brand" href="/pages/home.html">
+        <img src="/assets/img/logo.jpg" alt="logo" height="200">
        </a>
       <nav class="navbar navbar-expand-lg navbar-light bg-light custom-navbar">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -21,26 +21,26 @@
               <a class="nav-link" href="/pages/home.html">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <a class="nav-link dropdown-toggle" href="#" id="congressDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Congress 113
               </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                <a class="dropdown-item" href="/pages/senate.html">Senate</a>
-                <a class="dropdown-item" href="/pages/house.html">House</a>
+              <div class="dropdown-menu" aria-labelledby="congressDropdown">
+                <a class="dropdown-item" href="/pages/members.html?chamber=senate">Senate</a>
+                <a class="dropdown-item" href="/pages/members.html?chamber=house">House</a>
              </li>
              <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <a class="nav-link dropdown-toggle" href="#" id="attendanceDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Attendance
               </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <div class="dropdown-menu" aria-labelledby="attendanceDropdown">
                 <a class="dropdown-item" href="/pages/senate-attendance.html">Senate</a>
                 <a class="dropdown-item" href="/pages/house-attendance.html">House</a>
              </li>
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <a class="nav-link dropdown-toggle" href="#" id="loyaltyDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Loyalty
               </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <div class="dropdown-menu" aria-labelledby="loyaltyDropdown">
                 <a class="dropdown-item" href="/pages/senate-loyalty.html">Senate</a>
                 <a class="dropdown-item" href="/pages/house-loyalty.html">House</a>
                 
@@ -140,7 +140,7 @@
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-      
+        <script src="/active-state.js"></script>
       </body>
 
       <footer
@@ -287,4 +287,4 @@
 </div>
 <!-- End of .container -->
 </html>
-      </html>
+   
