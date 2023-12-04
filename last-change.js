@@ -156,13 +156,3 @@ function populateLessEngagedTable(members) {
 
 
 
-
-
-/*
-fetch('https://api.propublica.org/congress/v1/116/senate/members.json', {
-  method: 'GET',
-  headers: {
-    'X-API-KEY': '7K7BwVV5SlAlh13rWDa4licj8lcPKgB1WNroXVX9',
-    'Accept': 'application/json',
-    'Content-Type': 'application/json',
-    */
