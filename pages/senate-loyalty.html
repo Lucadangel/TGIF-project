@@ -8,6 +8,10 @@
     </head>
     
     <body>
+      <div id="spinner-container" class="loader-container">
+        <div class="loader"></div>
+      </div>
+
       <a class="navbar-brand" href="/pages/home.html">
         <img src="/assets/img/logo.jpg" alt="logo" height="200">
        </a>
@@ -51,7 +55,7 @@
       </nav>
   
 
-      <body>
+    
 
         <div class="container mt-5">
           <div class="row">
@@ -63,7 +67,7 @@
             </div>
             <div class="col-md-4">
               <h2>Senate at glance</h2>
-              <table class="table table-striped table-dark">
+              <table class="table table-striped table-dark" id="tableBody">
                 <thead>
                   <tr>
                     <th>Party</th>
@@ -74,18 +78,19 @@
                 <tbody>
                   <tr>
                     <td>Republican</td>
-                    <td>--</td>
-                    <td>--</td>
+                    <td Id = "republicanCount">--</td>
+                    <td Id = "republicanpercentuage">--</td>                  
+                  </tr>
                   </tr>
                   <tr>
                     <td>Democrat</td>
-                    <td>--</td>
-                    <td>--</td>
+                    <td id="democratCount">--</td>
+                    <td id="democratpercentuage"></td>--</td>
                   </tr>
                   <tr>
                     <td>Independent</td>
-                    <td>--</td>
-                    <td>--</td>
+                    <td id="independentCount">--</td>
+                    <td id="independentpercentuage">--</td>
                   </tr>
                 </tbody>
               </table>
@@ -95,7 +100,7 @@
           <div class="row mt-4">
             <div class="col-md-6">
               <h2>Least Loyal (Bottom 10% of Party)</h2>
-              <table class="table table table-striped table-dark">
+              <table id="tableBodyLessEngaged" class="table table table-striped table-dark">
                 <thead>
                   <tr>
                     <th>Name</th>
@@ -106,16 +111,16 @@
                 <tbody>
                   <!-- Repeat this row for each member -->
                   <tr>
-                    <td>--</td>
-                    <td>--</td>
-                    <td>--</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
                   </tr>
                 </tbody>
               </table>
             </div>
             <div class="col-md-6">
               <h2>Most Loyal (Top 10% of Party)</h2>
-              <table class="table table table-striped table-dark">
+              <table id="tableBodyMostEngaged" class="table table table-striped table-dark">
                 <thead>
                   <tr>
                     <th>Name</th>
@@ -126,9 +131,9 @@
                 <tbody>
                   <!-- Repeat this row for each member -->
                   <tr>
-                    <td>--</td>
-                    <td>--</td>
-                    <td>--</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
                   </tr>
                 </tbody>
               </table>
@@ -141,6 +146,7 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
         <script src="/active-state.js"></script>
+      <script src="/loyality.js"></script>
       </body>
 
       <footer
@@ -287,4 +293,4 @@
 </div>
 <!-- End of .container -->
 </html>
-      </html>
+      

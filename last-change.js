@@ -56,6 +56,7 @@ if (chamber === "senate") {
   document.getElementById("line2").innerHTML = "Each U.S. state is represented in the House in proportion to its population as measured in the census, but every state is entitled to at least one representative.";
 
 }
+document.getElementById('spinner-container').style.display = 'block';
 
 // Fetch data and store the original members' data
 fetch(apiUrl, {
@@ -68,13 +69,18 @@ fetch(apiUrl, {
 })
   .then(response => response.json())
   .then(data => {
+    document.getElementById('spinner-container').style.display = 'none';
+
     originalMembers = data.results[0].members;
     populateTable(originalMembers);
   })
   .catch(error => {
+    document.getElementById('spinner-container').style.display = 'none';
+
     console.error('Error:', error);
     console.log('Response:', error.responseText);
     console.log('Status:', error.status);
+
   });
 
 // Event listeners for checkbox changes
@@ -88,7 +94,9 @@ function filterMembers() {
 
   if (republicanCheckbox.checked) selectedParties.push('R');
   if (democraticCheckbox.checked) selectedParties.push('D');
-  if (independentCheckbox.checked) selectedParties.push('ID');
+  if (chamber === "senate" && independentCheckbox.checked) selectedParties.push('ID');
+  if (chamber === "house" && independentCheckbox.checked) selectedParties.push('I');
+
 
   if (selectedParties.length > 0) {
     filteredMembers = originalMembers.filter(mem => selectedParties.includes(mem.party));
@@ -128,7 +136,22 @@ function populateTable(members) {
 }
 
 
+function populateLessEngagedTable(members) {
+  // Sort members by missed_votes_pct in ascending order
+  const sortedMembers = members.slice().sort((a, b) => a.missed_votes_pct - b.missed_votes_pct);
 
+  // Display the less engaged members
+  for (let i = 0; i < 10; i++) { // Displaying the first 10 less engaged members
+    const fullName = `${sortedMembers[i].first_name} ${sortedMembers[i].last_name}`;
+    const row = tableBodyLessEngaged.insertRow(i);
+
+    row.innerHTML = `
+      <td><a href="${sortedMembers[i].url}" target="_blank">${fullName}</a></td>
+      <td>${sortedMembers[i].missed_votes}</td>
+      <td>${sortedMembers[i].missed_votes_pct}</td>
+    `;
+  }
+}
 
 
 

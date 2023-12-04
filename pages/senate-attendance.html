@@ -8,6 +8,9 @@
     </head>
     
     <body>
+      <div id="spinner-container" class="loader-container">
+        <div class="loader"></div>
+      </div>
       <a class="navbar-brand" href="/pages/home.html">
         <img src="/assets/img/logo.jpg" alt="logo" height="200">
        </a>
@@ -84,18 +87,18 @@
                 <tbody>
                   <tr>
                     <td>Republican</td>
-                    <td>--</td>
-                    <td>--</td>
+                    <td Id = "republicanCount">--</td>
+                    <td Id = "republicanpercentuage">--</td>
                   </tr>
                   <tr>
                     <td>Democrat</td>
-                    <td>--</td>
-                    <td>--</td>
+                    <td id="democratCount">--</td>
+                    <td id="democratpercentuage"></td>--</td>
                   </tr>
                   <tr>
                     <td>Independent</td>
-                    <td>--</td>
-                    <td>--</td>
+                    <td id="independentCount">--</td>
+                    <td id="independentpercentuage">--</td>
                   </tr>
                 </tbody>
               </table>
@@ -105,7 +108,7 @@
           <div class="row mt-4">
             <div class="col-md-6">
               <h2>Least Engaged (Bottom 10% Attendance)</h2>
-              <table class="table table table-striped table-dark">
+              <table id="tableBodyLessEngaged" class="table table table-striped table-dark">
                 <thead>
                   <tr>
                     <th>Name</th>
@@ -116,16 +119,16 @@
                 <tbody>
                   <!-- Repeat this row for each member -->
                   <tr>
-                    <td>--</td>
-                    <td>--</td>
-                    <td>--</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
                   </tr>
                 </tbody>
               </table>
             </div>
             <div class="col-md-6">
               <h2>Most Engaged (Top 10% Attendance)</h2>
-              <table class="table table table-striped table-dark">
+              <table id="tableBodyMostEngaged" class="table table table-striped table-dark">
                 <thead>
                   <tr>
                     <th>Name</th>
@@ -136,9 +139,9 @@
                 <tbody>
                   <!-- Repeat this row for each member -->
                   <tr>
-                    <td>--</td>
-                    <td>--</td>
-                    <td>--</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
                   </tr>
                 </tbody>
               </table>
